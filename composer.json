@@ -1,0 +1,23 @@
+{
+  "name": "CodeKobold/Postoffice",
+  "homepage": "http://codetalk.code-kobold.de/",
+  "description": "Provide an Interface to PHP-AMQPLib",
+  "license": "MIT",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Ron Metten",
+      "role": "Author",
+      "email": "code-kobold@keemail.me"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "CodeKobold\\Postoffice\\": "src/"
+    }
+  },
+  "require": {
+    "consolidation/robo": "~1",
+    "php-amqplib/php-amqplib": "^2.8"
+  }
+}
