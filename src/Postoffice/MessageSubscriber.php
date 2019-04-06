@@ -1,6 +1,6 @@
 <?php
 
-namespace CodeKobold\Postoffice;
+namespace CodeKobold\Postoffice\Postoffice;
 
 use PhpAmqpLib\Channel\AMQPChannel;
 use PhpAmqpLib\Connection\AMQPStreamConnection;
