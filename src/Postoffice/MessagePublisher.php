@@ -58,12 +58,13 @@ class MessagePublisher
      *
      * @param string $body
      * @param string $routingKey
+     * @param string $ttl (secs/1000)
      */
-    public function sendMessage(string $body, string $routingKey = '#')
+    public function sendMessage(string $body, string $routingKey = '#', string $ttl = '3600000')
     {
         $message = new AMQPMessage(
             $body,
-            array('content_type' => 'text/plain', 'delivery_mode' => AMQPMessage::DELIVERY_MODE_PERSISTENT)
+            ['content_type' => 'text/plain', 'expiration' => $ttl, 'delivery_mode' => AMQPMessage::DELIVERY_MODE_PERSISTENT]
         );
 
         $this->channel->basic_publish($message, $this->exchange, $routingKey);

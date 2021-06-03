@@ -1,6 +1,5 @@
 {
   "name": "code-kobold/postoffice",
-  "homepage": "http://codetalk.code-kobold.de/",
   "description": "Provide an Interface to PHP-AMQPLib",
   "license": "MIT",
   "type": "library",
@@ -17,7 +16,6 @@
     }
   },
   "require": {
-    "consolidation/robo": "~1",
     "php-amqplib/php-amqplib": "^2.8"
   }
 }
